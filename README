@@ -1,0 +1,5 @@
+An approvable module. This includes all confirmable functions as approval should happen before confirmation.
+
+Workflow:
+
+Admin email should be added to the configuration. When user signs up admin receives email with link to approve user. Admin clicks link with token. User is approved. Confirmation email gets sent to user. User clicks confirmation link. Profit.
