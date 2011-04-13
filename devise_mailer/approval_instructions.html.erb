@@ -1,0 +1,11 @@
+<p>Someone has registered for a membership.</p>
+
+<p>Details:
+<%= "<br />First Name: #{@resource.first_name}" if !@resource.first_name.nil? %>
+<%= "<br />Last Name: #{@resource.last_name}" if !@resource.last_name.nil? %>
+<%= "<br />E-Mail: #{@resource.email}" if !@resource.email.nil? %>
+<%= "<br />Phone Number: #{@resource.phone}" if !@resource.phone.nil? %>
+<%= "<br />Bio: #{@resource.bio}" if !@resource.bio.nil? %>
+
+<p>If you would like to approve this person click the following link. Clicking the link will approve the new user and send the user a confirmation email.</p>
+<p><%= link_to "Approve account for #{@resource.email} #{approvals_url(@resource.approval_token)}", approvals_url(@resource.approval_token) %></p>
